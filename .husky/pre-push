@@ -1,0 +1,4 @@
+# Run all tests before pushing
+npm run test:unit
+npm run test:integration
+npm run test:e2e
