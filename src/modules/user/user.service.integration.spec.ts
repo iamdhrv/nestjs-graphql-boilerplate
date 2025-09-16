@@ -1,8 +1,10 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { UserService } from './user.service';
-import { PrismaService } from '../../common/database/prisma.service';
+
+import { afterEach, beforeEach, describe, expect, it } from 'vitest';
+
 import { DatabaseModule } from '../../common/database/database.module';
-import { describe, beforeEach, afterEach, it, expect } from 'vitest';
+import { PrismaService } from '../../common/database/prisma.service';
+import { UserService } from './user.service';
 
 describe('UserService Integration', () => {
   let service: UserService;

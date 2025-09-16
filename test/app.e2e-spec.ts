@@ -1,8 +1,10 @@
-import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
+import { Test, TestingModule } from '@nestjs/testing';
+
+import { afterEach, beforeEach, describe, expect, it } from 'vitest';
+
 import { AppModule } from '../src/app.module';
 import { PrismaService } from '../src/common/database/prisma.service';
-import { describe, beforeEach, afterEach, it, expect } from 'vitest';
 
 describe('AppController (e2e)', () => {
   let app: INestApplication;
@@ -15,7 +17,7 @@ describe('AppController (e2e)', () => {
 
     app = moduleFixture.createNestApplication();
     prisma = moduleFixture.get<PrismaService>(PrismaService);
-    
+
     await app.init();
   });
 

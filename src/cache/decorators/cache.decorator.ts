@@ -13,7 +13,11 @@ export function Cacheable(
   key: string | ((...args: any[]) => string),
   ttl?: number,
 ): MethodDecorator {
-  return (target: any, propertyKey: string | symbol, descriptor: PropertyDescriptor) => {
+  return (
+    target: any,
+    propertyKey: string | symbol,
+    descriptor: PropertyDescriptor,
+  ) => {
     SetMetadata(CACHE_KEY_METADATA, key)(target, propertyKey, descriptor);
     if (ttl) {
       SetMetadata(CACHE_TTL_METADATA, ttl)(target, propertyKey, descriptor);
@@ -43,7 +47,11 @@ export function CachePut(
   key: string | ((...args: any[]) => string),
   ttl?: number,
 ): MethodDecorator {
-  return (target: any, propertyKey: string | symbol, descriptor: PropertyDescriptor) => {
+  return (
+    target: any,
+    propertyKey: string | symbol,
+    descriptor: PropertyDescriptor,
+  ) => {
     SetMetadata('cache:put', key)(target, propertyKey, descriptor);
     if (ttl) {
       SetMetadata(CACHE_TTL_METADATA, ttl)(target, propertyKey, descriptor);

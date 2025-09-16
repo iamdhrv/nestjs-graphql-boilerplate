@@ -1,8 +1,11 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { UserService } from './user.service';
-import { PrismaService } from '../../common/database/prisma.service';
-import { describe, beforeEach, it, expect, vi } from 'vitest';
+
 import * as bcrypt from 'bcrypt';
+
+import { beforeEach, describe, expect, it, vi } from 'vitest';
+
+import { PrismaService } from '../../common/database/prisma.service';
+import { UserService } from './user.service';
 
 // Mock bcrypt
 vi.mock('bcrypt');

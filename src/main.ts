@@ -11,7 +11,7 @@ import { EnvironmentVariables } from './common/helper/env.validation';
  */
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  
+
   const configService = app.get(ConfigService<EnvironmentVariables>);
   const port = configService.get('PORT') || 3000;
 

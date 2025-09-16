@@ -1,9 +1,10 @@
 import { ConfigService } from '@nestjs/config';
 
+import { DataSource, DataSourceOptions } from 'typeorm';
+
 import { config } from 'dotenv';
 import { join } from 'path';
 import { cwd, env } from 'process';
-import { DataSource, DataSourceOptions } from 'typeorm';
 
 import { getEnvPath } from '../helper/env.helper';
 
