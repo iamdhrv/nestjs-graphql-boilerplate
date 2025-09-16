@@ -1,4 +1,2 @@
-# Run all tests before pushing
+# Run unit tests before pushing (integration and e2e tests require database setup)
 npm run test:unit
-npm run test:integration
-npm run test:e2e
