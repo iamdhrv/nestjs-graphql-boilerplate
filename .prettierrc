@@ -1,0 +1,32 @@
+{
+  "singleQuote": true,
+  "trailingComma": "all",
+  "tabWidth": 2,
+  "semi": true,
+  "printWidth": 80,
+  "importOrder": [
+    "^@nestjs/(.*)$",
+    "^@apollo/(.*)$",
+    "^apollo-(.*)$",
+    "^graphql(.*)$",
+    "^typeorm(.*)$",
+    "^passport(.*)$",
+    "^bcrypt(.*)$",
+    "^class-(.*)$",
+    "^cache-(.*)$",
+    "^prom-(.*)$",
+    "^uuid(.*)$",
+    "^axios(.*)$",
+    "^rxjs(.*)$",
+    "^reflect-(.*)$",
+    "^rimraf(.*)$",
+    "^ora(.*)$",
+    "^@aws-sdk/(.*)$",
+    "^[a-zA-Z]",
+    "^src/(.*)$",
+    "^[./]"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "plugins": ["@trivago/prettier-plugin-sort-imports"]
+}
